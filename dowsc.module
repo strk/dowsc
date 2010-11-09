@@ -173,11 +173,13 @@ function dowsc_menu()
     'page callback' => '_dowsc_country_hack',
     'page arguments' => array(0, 1, 2),
     'access arguments' => array('access content'),
+    'type'             => MENU_CALLBACK
   );
   $items['region'] = array(
     'page callback' => '_dowsc_country_hack',
     'page arguments' => array(0, 1, 2),
     'access arguments' => array('access content'),
+    'type'	       => MENU_CALLBACK
   );
 
   return $items;
