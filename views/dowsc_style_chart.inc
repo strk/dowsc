@@ -208,14 +208,16 @@ class dowsc_style_chart extends dowsc_style {
       }
 
       $fieldnames = array_keys($fieldnames_idx);
-
-      // Sort alphabetically by field name.
-      // TODO: sort by field _labels_ instead !!
-      //       (if 'rendered_slicing' is checked they
-      //        will be equal so it makes no difference)
-      sort($fieldnames);
-
       $fieldlabels = $this->findFieldLabels($fieldnames);
+
+      // Sort alphabetically by field label
+      $labels = array();
+      for ($i=0; $i<count($fieldlabels); ++$i) 
+        $labels[$fieldnames[$i]] = $fieldlabels[$i];
+      asort($labels);
+      $fieldnames = array_values($labels);
+      $fieldlabels = array_keys($labels);
+
 
       foreach ($classes as $name => $class) {
           $slices = $class->getState();
