@@ -1,0 +1,8 @@
+name = Dynamic OWS client
+description = Client to the dynamic OWS service
+package = GeoNode
+dependencies[] = classifier
+dependencies[] = views
+dependencies[] = openlayers
+core = 6.x
+version = "6.x-1.0"
