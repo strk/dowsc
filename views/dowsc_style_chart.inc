@@ -215,9 +215,8 @@ class dowsc_style_chart extends dowsc_style {
       for ($i=0; $i<count($fieldlabels); ++$i) 
         $labels[$fieldnames[$i]] = $fieldlabels[$i];
       asort($labels);
-      $fieldnames = array_values($labels);
-      $fieldlabels = array_keys($labels);
-
+      $fieldnames = array_keys($labels);
+      $fieldlabels = array_values($labels);
 
       foreach ($classes as $name => $class) {
           $slices = $class->getState();
