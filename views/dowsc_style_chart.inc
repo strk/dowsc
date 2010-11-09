@@ -209,6 +209,14 @@ class dowsc_style_chart extends dowsc_style {
 
       $fieldnames = array_keys($fieldnames_idx);
 
+      // Sort alphabetically by field name.
+      // TODO: sort by field _labels_ instead !!
+      //       (if 'rendered_slicing' is checked they
+      //        will be equal so it makes no difference)
+      sort($fieldnames);
+
+      $fieldlabels = $this->findFieldLabels($fieldnames);
+
       foreach ($classes as $name => $class) {
           $slices = $class->getState();
           $data[$name] = array();
@@ -218,11 +226,8 @@ class dowsc_style_chart extends dowsc_style {
           }
       }
 
-      $fieldlabels = $this->findFieldLabels($fieldnames);
-      $fieldnames = $fieldlabels;
-
       // Use configured palette 
-      $palette = $this->extractPalette($fieldnames);
+      $palette = $this->extractPalette($fieldlabels);
 
       //echo "<pre>Data: "; var_dump($data) . "\n"; die();
     } catch (Exception $e) {
@@ -251,8 +256,7 @@ class dowsc_style_chart extends dowsc_style {
               'maxsize' => $maxsize
             ),
             'values' => $data,
-            'fieldnames' => $fieldnames,
-            // TODO: figure out fieldnames !
+            'fieldnames' => $fieldlabels,
           )
         )
       )
