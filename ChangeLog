@@ -1,0 +1,35 @@
+2010-11-10  Sandro Santilli <strk@keybit.net>
+
+	* layer_types/dowsc_layer.inc: robustness in view args fetching
+	(seen in openlayers module and went after :)
+
+2010-11-09  Paolo <paolomainardi@ext.jrc.ec.europa.eu>
+
+	* : commit f59fe8e2838ebfa7495d5f0e1c5332221d929e9a Author: Paolo
+	<paolomainardi@ext.jrc.ec.europa.eu> Date:   Tue Nov 9 18:27:28 2010
+	+0100
+
+2010-11-09  Sandro Santilli <strk@keybit.net>
+
+	* views/dowsc_style_chart.inc: Oops, now sorting of class names is
+	_really_ fixed.
+
+2010-11-09  Sandro Santilli <strk@keybit.net>
+
+	* views/dowsc_style_chart.inc: Fix sorting of field names to be
+	always based on actual field _labels_
+
+2010-11-09  Sandro Santilli <strk@keybit.net>
+
+	* views/dowsc_style_chart.inc: Sort field names alphabetically (not
+	100% correct as it sorts field values, not labels, but works good
+	enough for now)
+
+2010-11-09  Sandro Santilli <strk@keybit.net>
+
+	* README: Add initial README
+
+2010-11-09  Sandro Santilli <strk@keybit.net>
+
+	* initial commit
+
