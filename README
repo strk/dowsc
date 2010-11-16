@@ -1,9 +1,10 @@
 Dynamic OWS service client module for drupal
 --------------------------------------------
+http://github.com/strk/dowsc
 
 See DOWS for the server part (unavailable at time of writing).
 
 Depends on the drupal classifier module, see
 https://github.com/strk/classifier
 
-This code is released in the Public Domain.
+This code is released under the GPL3 licence (see COPYING)
