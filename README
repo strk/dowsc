@@ -7,4 +7,5 @@ See DOWS for the server part (unavailable at time of writing).
 Depends on the drupal classifier module, see
 https://github.com/strk/classifier
 
-This code is released under the GPL3 licence (see COPYING)
+Copyright (C) 2010 Sandro Santilli <strk@keybit.net>
+Released under the GPL3 licence (see COPYING)
